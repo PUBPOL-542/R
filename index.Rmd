@@ -2,27 +2,20 @@
 
 
 ```{r}
+ 
 # clean memory
 rm(list = ls())
 
-library(readxl)
-povertyWA <- read_excel("povertyWA.xlsx")
-View(povertyWA)
-```
+#link To file
+link='https://github.com/PUBPOL-542/R/raw/main/povertyWA.Rmd'
 
+myFile=url(link)
 
-
-```{r}
 # reading in data:
-
-povertyWA <- excel_format("Desktop/povertyWA.xlsx")
-myFile=excel_sheets("povertyWA")
-multidata=readRDS(file = myFile)
+multidata=read_xlsx("povertyWA.xlsx")
 
 # reset indexes to R format:
 row.names(multidata)=NULL
-
-str(multidata,width = 70,strict.width='cut')
 ```
 
 
