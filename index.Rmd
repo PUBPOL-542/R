@@ -7,12 +7,14 @@
 rm(list = ls())
 
 #link To file
-link='https://github.com/PUBPOL-542/R/raw/main/povertyWA.Rmd'
+link='https://github.com/PUBPOL-542/R/raw/main/index.Rmd'
 
 myFile=url(link)
 
 # reading in data:
-multidata=read_xlsx("povertyWA.xlsx")
+library(readxl)
+multidata =  read_excel("povertyWA.xlsx")
+
 
 # reset indexes to R format:
 row.names(multidata)=NULL
